@@ -7,7 +7,7 @@ const App = () => {
     <div>
       <h1>Hi! I'm Jada Lilleboe.</h1>
       <h2>I'm a computer science student at the University of Minnesota Twin-Cities.</h2>
-      <image src={jadaPic} alt="Picture of Jada Lilleboe"></image>
+      <img src={jadaPic} alt="Jada Lilleboe" width={300} height={400}/>
     </div>
   )
 }
