@@ -3,7 +3,13 @@
 }
 
 body {
-  background-color: orange;
+  background-color: rgb(27, 73, 88);
+  color: #e8e6e3;
+  text-align: center;
+}
+
+.home {
+  text-align: center;
 }
 
 .App-header {
@@ -17,7 +23,20 @@ body {
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+nav {
+  text-align: center;
 }
 
+nav ul {
+  list-style: none;
+  display: flex;
+  background-color: black;
+  margin-bottom: 20px;
+  text-align:center;
+}
+
+nav ul li {
+  padding: 20px;
+  color: white;
+  display: inline;
+}
