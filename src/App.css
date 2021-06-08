@@ -16,6 +16,18 @@ body {
 
 /* Navigation Bar Styles */
 
+.navig-link {
+  color: white;
+}
+
+.navig-link:hover {
+  border-radius: 5px;
+  color: white;
+  text-decoration: none;
+  background-color: #c21e56;
+  transition: background-color .5s;
+}
+
 nav ul {
   list-style: none;
   display: flex;
@@ -30,7 +42,7 @@ nav ul {
 
 nav ul li {
   padding: 20px 50px;
-  color: white;
+  color: white !important;
   display: inline;
 }
 
