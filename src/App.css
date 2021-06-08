@@ -28,6 +28,10 @@ body {
   transition: background-color .5s;
 }
 
+.current {
+  border-bottom: 4px solid #c21e56;
+}
+
 nav ul {
   list-style: none;
   display: flex;

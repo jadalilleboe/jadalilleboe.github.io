@@ -12,11 +12,12 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 
 const Main = () => (
   <Switch>
-    <Route path='/contact' component={Contact}></Route>
-    <Route path='/projects' component={Projects}></Route>
-    <Route path='/blog' component={Blog}></Route>
-    <Route path='/about' component={About}></Route>
-    <Route path='/' component={Home}></Route>
+    <Route exact path='/' component={Home}></Route>
+    <Route exact path='/contact' component={Contact}></Route>
+    <Route exact path='/projects' component={Projects}></Route>
+    <Route exact path='/blog' component={Blog}></Route>
+    <Route exact path='/about' component={About}></Route>
+    
   </Switch>
 )
 
