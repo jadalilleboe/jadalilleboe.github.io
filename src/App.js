@@ -9,6 +9,7 @@ const Home = () => {
     <div className="home-wrapper">
       <nav>
         <ul>
+          <li>Home</li>
           <li>About</li>
           <li>Blog</li>
           <li>Projects</li>
