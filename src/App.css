@@ -5,6 +5,9 @@ html {
 *, *:before, *:after {
   box-sizing: inherit;
 }
+#root {
+  height: 100vh;
+}
 
 body {
   background-color: black;
@@ -38,25 +41,21 @@ nav ul li {
 img {
   border-radius: 25px;
   max-width: 100%;
-  height: 100%;
+  height: 50%;
 }
 
 .jada-picture {
   max-width: 100%;
-  height: 100%;
+  height: 50%;
   margin: 0;
 }
 
 .jada-picture img {
   border: 5px solid black;
   margin-bottom: 50px;
+  /* height: 50% */
+  max-height: 760px;
 }
-
-
-.home-wrapper {
-  text-align: left;
-}
-
 .home-content {
   display: grid;
   grid-template-columns: repeat(autofit, minmax(100px, 1fr));
@@ -71,7 +70,8 @@ img {
 }
 
 .home-left h2 {
-  text-align: left;
+  text-align: center;
+  justify-content: left;
   margin: 10% 10%;
 }
 
@@ -116,10 +116,27 @@ footer p {
   text-align: left;
 }
 
-@media screen and (max-width:760px) {
+@media screen and (max-width:768px) {
   .home-content {
     display: inline-block;
     height: 1050px;
+  }
+  .jada-picture img {
+    max-height: min-content;
+  }
+  nav ul li {
+    padding: 20px 15px;
+  }
+
+}
+
+@media screen and (min-width:480px) and (max-width:768px) {
+  .jada-picture img {
+    max-height: 500px;
+  }
+  
+  .jada-picture {
+    text-align: center;
   }
 
 }
