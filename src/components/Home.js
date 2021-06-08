@@ -9,7 +9,7 @@ const Home = () => {
           <h2>I'm a computer science student at the University of Minnesota Twin-Cities.</h2>
           <p>Feel free to explore this site to learn more about me!</p>
         </div>
-        <div className="middle-grid-item jada-picture">
+        <div className="right-grid-item jada-picture">
           <img src={jadaPic} alt="Jada Lilleboe" className="img-fluid"/>
         </div>
       </div>
