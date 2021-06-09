@@ -150,12 +150,20 @@ img {
   color: white;
 }
 
+/* Blog Page Styling */
+
+.blog-content {
+  background-image: url(img/yellowbg.jpg);
+  background-size: cover;
+  height: 500px;
+}
+
 /* Projects Page Styling */
 
 .projects-content {
   background-image: url(img/projectsbg.jpg);
   background-size: cover;
-  height: 1300px;
+  height: 800px;
   color: white;
   text-align: center;
 }
@@ -163,8 +171,12 @@ img {
 .projects-cards {
   display: grid;
   text-align:center;
-  grid-template-columns: repeat(2, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(320px, 2fr));
   grid-gap: 15px;
+}
+
+.project-button:hover {
+  background-color: aliceblue !important;
 }
 
 /* Contact Page Styling */
@@ -204,6 +216,8 @@ footer p {
   text-align: left;
 }
 
+/* IPad usually breaks here */
+
 @media screen and (max-width:768px) {
   /* Home Media Queries */
   .home-content {
@@ -229,6 +243,8 @@ footer p {
 
 }
 
+/* Change sizing of navigation for smaller screens */
+
 @media screen and (max-width:430px) {
   nav ul {
     text-align: left;
@@ -238,6 +254,22 @@ footer p {
     text-align: left;
   }
 }
+
+/* Increase size of projects div to hold all of the projects cards */
+
+@media screen and (max-width:1000px) {
+  .projects-content {
+    height: 1100px;
+  }
+}
+
+@media screen and (max-width: 660px) {
+  .projects-content {
+    height: 1800px;
+  }
+}
+
+/* Change sizing of home page image for intermediate screens (so it doesn't run into my footer) */
 
 @media screen and (min-width:480px) and (max-width:768px) {
   .jada-picture img {
