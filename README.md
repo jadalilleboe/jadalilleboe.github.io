@@ -1,1 +1,1 @@
-My personal website and portfolio, built with HTML/CSS, React, and GitHub Pages.
+My personal website and portfolio. Built with HTML/CSS, React, and GitHub Pages.
