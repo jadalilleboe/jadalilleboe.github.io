@@ -25,6 +25,18 @@ body {
   transition: background-color .5s;
 }
 
+ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: black;
+  margin-bottom: 20px;
+  text-align:center;
+  padding-left: 0px;
+  margin: 0 auto;
+}
+
 /* Navigation Bar Styles */
 
 .navig-link {
@@ -209,9 +221,15 @@ footer p {
   color: white;
 }
 
+.socials-bar {
+  float: right;
+}
+
+footer ul li {
+  padding: 15px;
+}
 
 .copyright {
-  /* padding: 2% 0; */
   margin: 30px 0;
   text-align: left;
 }
@@ -253,6 +271,19 @@ footer p {
     padding: 20px 10px;
     text-align: left;
   }
+
+  footer {
+    height: 200px;
+    display: inline-block;
+    text-align: center;
+  }
+
+  footer p {
+    float: none;
+  }
+  .socials-bar {
+    float: none;
+  }
 }
 
 /* Increase size of projects div to hold all of the projects cards */
@@ -261,6 +292,7 @@ footer p {
   .projects-content {
     height: 1100px;
   }
+
 }
 
 @media screen and (max-width: 660px) {
