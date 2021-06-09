@@ -150,6 +150,31 @@ img {
   color: white;
 }
 
+/* Projects Page Styling */
+
+.projects-content {
+  background-image: url(img/projectsbg.jpg);
+  background-size: cover;
+  height: 800px;
+  color: white;
+}
+
+/* Contact Page Styling */
+
+.contact-content {
+  background-image: url(img/contactbg.jpg);
+  background-size: cover;
+  height: 500px;
+  color: white;
+  text-align: center;  
+}
+
+.contact-group {
+  background-color: black;
+  opacity: 0.75;
+  padding: 15px 0;
+}
+
 /* Footer Styling */
 
 footer {
