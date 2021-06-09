@@ -6,9 +6,9 @@ const Footer = () => {
       <footer>
         <p className="copyright">© 2021 by Jada Lilleboe.</p>
         <ul className="socials-bar">
-          <li><SocialIcon url="https://www.linkedin.com/in/jada-lilleboe-aa2599202/" /></li>
-          <li><SocialIcon url="https://github.com/jadalilleboe" bgColor="white"/></li>
-          <li><SocialIcon url="https://www.tiktok.com/@codeforbeginners?lang=en" bgColor="white"/></li>
+          <li><SocialIcon url="https://www.linkedin.com/in/jada-lilleboe-aa2599202/" target="_blank"/></li>
+          <li><SocialIcon url="https://github.com/jadalilleboe" bgColor="white" target="_blank"/></li>
+          <li><SocialIcon url="https://www.tiktok.com/@codeforbeginners?lang=en" bgColor="white" target="_blank"/></li>
         </ul>
       </footer>
     )
