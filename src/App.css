@@ -279,9 +279,11 @@ footer ul li {
   }
 
   footer p {
+    text-align: center;
     float: none;
   }
   .socials-bar {
+    text-align: center;
     float: none;
   }
 }
