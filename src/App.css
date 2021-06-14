@@ -182,9 +182,10 @@ img {
 
 .projects-cards {
   display: grid;
-  text-align:center;
+  text-align: center;
   grid-template-columns: repeat(auto-fit, minmax(320px, 2fr));
   grid-gap: 15px;
+  /* display: flex; */
 }
 
 .project-button:hover {
@@ -300,6 +301,12 @@ footer ul li {
 @media screen and (max-width: 660px) {
   .projects-content {
     height: 1800px;
+  }
+}
+
+@media screen and (min-width: 900px) and (max-width: 1000px) {
+  .projects-content {
+    height: 1200px;
   }
 }
 

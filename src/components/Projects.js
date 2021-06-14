@@ -4,15 +4,25 @@ import emailPic from '../img/email.png'
 import apiPic from '../img/survivorapi.png'
 
 const ProjectCard = ({ img, title, text, ghLink, otherLink, otherLinkText }) => {
+    const cardStyle = {
+        maxWidth: '30rem',
+        height: 'fit-content',
+        overflow: 'hidden',
+        display: 'inline-block',
+        color:'white',
+        backgroundColor: '#126948',
+        margin: '20px',
+        flexGrow: 0
+    }
     return (
-        <Card style={{maxWidth: '30rem', minWidth: 100, color: 'white', backgroundColor: '#126948', margin: "20px"}}>
+        <Card style={cardStyle}>
             <Card.Img src={img}/>
             <Card.Body>
                 <Card.Title>{title}</Card.Title>
                 <Card.Text>{text}</Card.Text>
                 <a href={ghLink} target="_blank" rel="noreferrer"><Button className="project-button" style={{backgroundColor: '#d2b48c', color: 'black', marginBottom: 10}}>GitHub Repository</Button></a>
                 <br />
-                <a href={otherLink} target="_blank" rel="noreferrer"><Button className="project-button" style={{backgroundColor: '#d2b48c', color: 'black'}}>{otherLinkText}</Button></a>
+                <a href={otherLink} target="_blank" rel="noreferrer"><Button className="project-button" style={{backgroundColor: '#d2b48c', color: 'black', maxHeight: '5em'}}>{otherLinkText}</Button></a>
             </Card.Body>
         </Card>
     )
