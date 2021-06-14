@@ -2,7 +2,7 @@ import React from 'react'
 import Navigation from './components/Navigation'
 import Home from './components/Home'
 import About from './components/About'
-import Blog from './components/Blog'
+import BlogPage from './components/BlogPage'
 import BlogPost from './components/BlogPost'
 import Contact from './components/Contact'
 import Projects from './components/Projects'
@@ -16,10 +16,10 @@ const Main = () => (
     <Route exact path='/' component={Home}></Route>
     <Route exact path='/contact' component={Contact}></Route>
     <Route exact path='/projects' component={Projects}></Route>
-    <Route exact path='/blog' component={Blog}></Route>
-    {/* <Route exact path='/blog/page/:pageNum' render={(props) => (
+    {/* <Route exact path='/blog' component={Blog}></Route> */}
+    <Route exact path='/blog/page/:pageNum' render={(props) => (
       <BlogPage pageNum={props.match.params.pageNum} />
-    )}></Route> */}
+    )}></Route>
     <Route exact path='/blog/post/:id' render={(props) => (
       <BlogPost id={props.match.params.id} />
     )}></Route>
