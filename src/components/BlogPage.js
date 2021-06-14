@@ -37,7 +37,16 @@ const BlogPage = ({ pageNum }) => {
                 <h1 style={{textAlign: 'center'}}>Jada's Blog</h1>
                 {postsToDisplay.map((post, i) => <BlogCard key={i} title={post.title} excerpt={post.excerpt} id={post.id} />
                 )}
-                <Button href={`/blog/page/${parseInt(pageNum) + 1}`}>-></Button>
+                <Button href={`/blog/page/${parseInt(pageNum) + 1}`}>-&gt;</Button>
+            </div>
+        )
+    } else if (endingPostNum > posts.length){
+        return (
+            <div className="blog-content">
+                <h1 style={{textAlign: 'center'}}>Jada's Blog</h1>
+                {postsToDisplay.map((post, i) => <BlogCard key={i} title={post.title} excerpt={post.excerpt} id={post.id} />
+                )}
+                <Button href={`/blog/page/${parseInt(pageNum) - 1}`}>&lt;-</Button>
             </div>
         )
     } else {
