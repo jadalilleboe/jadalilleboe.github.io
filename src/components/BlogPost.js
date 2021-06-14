@@ -1,7 +1,10 @@
 import React, { useState, useEffect } from 'react'
+import { useHistory } from "react-router-dom";
+import { Button } from 'react-bootstrap'
 import postService from '../services/posts'
 
 const BlogPost = ({ id }) => {
+    let history = useHistory()
     const [ post, setPost ] = useState({})
     useEffect(() => {
         postService.getOnePost(id)
@@ -28,6 +31,7 @@ const BlogPost = ({ id }) => {
             <p>By Jada Lilleboe</p>
             <h1>{post.title}</h1>
             <p>{post.content}</p>
+            <Button onClick={() => history.goBack()}>&lt;-</Button>
         </div>
     )
 }

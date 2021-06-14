@@ -16,7 +16,6 @@ const Main = () => (
     <Route exact path='/' component={Home}></Route>
     <Route exact path='/contact' component={Contact}></Route>
     <Route exact path='/projects' component={Projects}></Route>
-    {/* <Route exact path='/blog' component={Blog}></Route> */}
     <Route exact path='/blog/page/:pageNum' render={(props) => (
       <BlogPage pageNum={props.match.params.pageNum} />
     )}></Route>
