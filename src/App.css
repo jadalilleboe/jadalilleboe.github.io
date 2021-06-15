@@ -171,6 +171,30 @@ img {
   text-align: center;
 }
 
+/* Blog Post Styling */
+
+.blog-post {
+  background-image: url(img/yellow-flowers.jpg);
+  background-size: cover;
+  text-align: center;
+}
+
+.blog-post-content {
+  background-color: white;
+  width: 50%;
+  margin: 0 auto;
+  opacity: 0.9;
+  border-radius: 15px;
+}
+
+.blog-post-text {
+  padding: 0px 10px 10px 10px;
+}
+
+.blog-post-info {
+  text-align: left;
+}
+
 /* Projects Page Styling */
 
 .projects-content {
