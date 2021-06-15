@@ -327,3 +327,11 @@ footer ul li {
   }
 
 }
+
+/* change width of blog post content */
+
+@media screen and (max-width:1000px) {
+  .blog-post-content {
+    width: 75%;
+  }
+}

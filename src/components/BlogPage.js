@@ -16,8 +16,16 @@ const BlogCard = ({ title, excerpt, id, date }) => {
     )
 }
 
+const Loading = ({ loading }) => {
+    if (loading) {
+        return <h1>Loading...</h1>
+    } 
+    return null
+}
+
 const BlogPage = ({ pageNum }) => {
     const [ posts, setPosts ] = useState([])
+    const [ loading, setLoading ] = useState(true)
 
     const endingPostNum = pageNum * 9
     const startingPostNum = endingPostNum - 8
@@ -26,6 +34,7 @@ const BlogPage = ({ pageNum }) => {
         postService.getAll()
         .then(posts => {
             setPosts(posts)
+            setLoading(false)
         })
         .catch(err => console.log(err))
     }, [])
@@ -48,6 +57,7 @@ const BlogPage = ({ pageNum }) => {
         return (
             <div className="blog-content">
                 <h1 style={{textAlign: 'center', padding: 20}}>Jada's Blog</h1>
+                <Loading loading={loading} />
                 <CardColumns>
                     {postsToDisplay.map((post, i) => <BlogCard key={i} title={post.title} excerpt={post.excerpt} id={post.id} date={formatDate(post.date)} />
                     )}
