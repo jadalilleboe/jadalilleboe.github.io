@@ -52,7 +52,7 @@ const BlogPage = ({ pageNum }) => {
                     {postsToDisplay.map((post, i) => <BlogCard key={i} title={post.title} excerpt={post.excerpt} id={post.id} date={formatDate(post.date)} />
                     )}
                 </CardColumns>
-                <NavLink to={`/blog/page/${parseInt(pageNum) + 1}`}><Button style={{margin: 10}}>-&gt;</Button></NavLink>
+                {/* <NavLink to={`/blog/page/${parseInt(pageNum) + 1}`}><Button style={{margin: 10}}>-&gt;</Button></NavLink> */}
             </div>
         )
     } else if (endingPostNum > posts.length){
