@@ -169,6 +169,7 @@ img {
   background-size: cover;
   height: fit-content;
   text-align: center;
+  color: black;
 }
 
 /* Blog Post Styling */
@@ -185,6 +186,7 @@ img {
   margin: 0 auto;
   opacity: 0.9;
   border-radius: 15px;
+  color: black;
 }
 
 .blog-post-text {
