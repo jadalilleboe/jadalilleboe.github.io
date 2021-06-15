@@ -38,7 +38,7 @@ const BlogPost = ({ id }) => {
                 <h1>{post.title}</h1>
                 <div className="blog-post-text" dangerouslySetInnerHTML={{__html: postMarkdown.body.innerHTML}} style={{textAlign: 'left', padding: '30px'}}/>
             </div>
-            <Button style={{margin: 10}} onClick={() => history.goBack()}>&lt;-</Button>
+            <Button style={{margin: 10, backgroundColor: 'black', borderColor: 'white'}} onClick={() => history.goBack()}>&lt;-</Button>
         </div>
     )
 }

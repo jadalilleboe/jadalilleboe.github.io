@@ -3,11 +3,12 @@ import { Button, Card, CardColumns } from 'react-bootstrap'
 import { NavLink } from 'react-router-dom'
 import postService from '../services/posts'
 
-const BlogCard = ({ title, excerpt, id }) => {
+const BlogCard = ({ title, excerpt, id, date }) => {
     return (
     <Card>
         <Card.Body>
             <Card.Title>{title}</Card.Title>
+            <Card.Subtitle className="mb-2 text-muted">{date}</Card.Subtitle>
             <Card.Text>{excerpt}</Card.Text>
             <NavLink to={`/blog/post/${id}`}><Button>Read More</Button></NavLink>
         </Card.Body>
@@ -29,6 +30,18 @@ const BlogPage = ({ pageNum }) => {
         .catch(err => console.log(err))
     }, [])
 
+    const formatDate = (date) => {
+        const tempDate = new Date(date)
+        const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
+                            
+        const year = tempDate.getFullYear()
+        const month = tempDate.getMonth()
+        const day = tempDate.getDate()                 
+        const shownDate = months[month] + ' ' + day + ', ' + year;    
+                    
+        return shownDate;
+    }
+
     const postsToDisplay = posts.filter(post => (post.id >= startingPostNum && post.id <= endingPostNum))
 
     if (parseInt(pageNum) === 1) {
@@ -36,7 +49,7 @@ const BlogPage = ({ pageNum }) => {
             <div className="blog-content">
                 <h1 style={{textAlign: 'center', padding: 20}}>Jada's Blog</h1>
                 <CardColumns>
-                    {postsToDisplay.map((post, i) => <BlogCard key={i} title={post.title} excerpt={post.excerpt} id={post.id} />
+                    {postsToDisplay.map((post, i) => <BlogCard key={i} title={post.title} excerpt={post.excerpt} id={post.id} date={formatDate(post.date)} />
                     )}
                 </CardColumns>
                 <NavLink to={`/blog/page/${parseInt(pageNum) + 1}`}><Button style={{margin: 10}}>-&gt;</Button></NavLink>
