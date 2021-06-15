@@ -96,7 +96,7 @@ img {
 .home-content {
   display: grid;
   grid-template-columns: repeat(autofit, minmax(100px, 1fr));
-  height: 800px;
+  height: fit-content;
   background-image: url(img/dark-roses.jpg);
   background-size: cover;
   color: #e8e6e3;
@@ -133,7 +133,7 @@ img {
   display: grid;
   grid-template-columns: repeat(autofit, minmax(100px, 1fr));
   column-gap: 100px;
-  height: 800px;
+  height: fit-content;
   background-image: url(img/orangetulips.jpg);
   background-size: cover;
   color: white;
@@ -167,7 +167,8 @@ img {
 .blog-content {
   background-image: url(img/yellowbg.jpg);
   background-size: cover;
-  height: 500px;
+  height: fit-content;
+  text-align: center;
 }
 
 /* Projects Page Styling */
@@ -175,7 +176,7 @@ img {
 .projects-content {
   background-image: url(img/projectsbg.jpg);
   background-size: cover;
-  height: 800px;
+  height: fit-content;
   color: white;
   text-align: center;
 }
@@ -241,7 +242,6 @@ footer ul li {
   /* Home Media Queries */
   .home-content {
     display: inline-block;
-    height: 1050px;
   }
   .jada-picture img {
     max-height: min-content;
@@ -286,27 +286,6 @@ footer ul li {
   .socials-bar {
     text-align: center;
     float: none;
-  }
-}
-
-/* Increase size of projects div to hold all of the projects cards */
-
-@media screen and (max-width:1000px) {
-  .projects-content {
-    height: 1100px;
-  }
-
-}
-
-@media screen and (max-width: 660px) {
-  .projects-content {
-    height: 1800px;
-  }
-}
-
-@media screen and (min-width: 900px) and (max-width: 1000px) {
-  .projects-content {
-    height: 1200px;
   }
 }
 
