@@ -28,11 +28,12 @@ const BlogPage = ({ pageNum }) => {
     const [ loading, setLoading ] = useState(true)
 
     const endingPostNum = pageNum * 9
-    const startingPostNum = endingPostNum - 8
+    const startingPostNum = endingPostNum - 9
 
     useEffect(() => {
         postService.getAll()
         .then(posts => {
+            posts.reverse()
             setPosts(posts)
             setLoading(false)
         })
@@ -51,7 +52,7 @@ const BlogPage = ({ pageNum }) => {
         return shownDate;
     }
 
-    const postsToDisplay = posts.filter(post => (post.id >= startingPostNum && post.id <= endingPostNum))
+    const postsToDisplay = posts.slice(startingPostNum, endingPostNum)
 
     if (parseInt(pageNum) === 1) {
         return (
