@@ -1,12 +1,12 @@
 import React from 'react'
-import placeholder from '../img/brownhairgirl.jpg'
+import jadapic2 from '../img/jadapic2.jpeg'
 import { NavLink } from 'react-router-dom'
 
 const About = () => {
     return (
         <div className="about-content">
             <div className="left-grid-item jada-picture-2">
-                <img className="img-fluid" src={placeholder} alt="placecholder"/>
+                <img className="img-fluid" src={jadapic2} alt="placecholder"/>
             </div>
             <div className="right-grid-item about-info">
                 <h1>About Me</h1>
