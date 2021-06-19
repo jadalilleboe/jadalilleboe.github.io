@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import { Button, Card, CardColumns } from 'react-bootstrap'
 import { NavLink } from 'react-router-dom'
-import postService from '../services/posts'
 
 const BlogCard = ({ title, excerpt, id, date }) => {
     return (
@@ -23,22 +22,9 @@ const Loading = ({ loading }) => {
     return null
 }
 
-const BlogPage = ({ pageNum }) => {
-    const [ posts, setPosts ] = useState([])
-    const [ loading, setLoading ] = useState(true)
-
+const BlogPage = ({ pageNum, posts }) => {
     const endingPostNum = pageNum * 9
     const startingPostNum = endingPostNum - 9
-
-    useEffect(() => {
-        postService.getAll()
-        .then(posts => {
-            posts.reverse()
-            setPosts(posts)
-            setLoading(false)
-        })
-        .catch(err => console.log(err))
-    }, [])
 
     const formatDate = (date) => {
         const tempDate = new Date(date)
@@ -58,7 +44,6 @@ const BlogPage = ({ pageNum }) => {
         return (
             <div className="blog-content">
                 <h1 style={{textAlign: 'center', padding: 20}}>Jada's Blog</h1>
-                <Loading loading={loading} />
                 <CardColumns>
                     {postsToDisplay.map((post, i) => <BlogCard key={i} title={post.title} excerpt={post.excerpt} id={post.id} date={formatDate(post.date)} />
                     )}
