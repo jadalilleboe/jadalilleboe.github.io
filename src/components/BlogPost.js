@@ -17,7 +17,6 @@ const BlogPost = ({ id }) => {
     }, [id])
 
     const postMarkdown = parser.parseFromString(post.content, "text/html")
-    console.log(postMarkdown)
 
     const formatDate = (date) => {
         const tempDate = new Date(date)
