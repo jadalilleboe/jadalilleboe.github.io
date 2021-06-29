@@ -164,7 +164,8 @@ img {
 
 .blog-post {
   background-image: url(img/yellow-flowers.jpg);
-  background-size: cover;
+  background-repeat: round;
+  /* background-size: cover; */
   text-align: center;
 }
 
