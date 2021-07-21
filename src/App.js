@@ -20,7 +20,7 @@ const Main = ({ posts }) => (
     <Route path='/blog/page/:pageNum' render={(props) => (
       <BlogPage pageNum={props.match.params.pageNum} posts={posts}/>
     )}></Route>
-    <Route exact path='/blog/post/:id' render={(props) => (
+    <Route exact path='/blog/post/:id/:titleURL' render={(props) => (
       <BlogPost id={props.match.params.id} />
     )}></Route>
     <Route exact path='/about' component={About}></Route>

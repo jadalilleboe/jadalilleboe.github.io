@@ -3,13 +3,15 @@ import { Button, Card, CardColumns } from 'react-bootstrap'
 import { NavLink } from 'react-router-dom'
 
 const BlogCard = ({ title, excerpt, id, date }) => {
+    const titleURL = title.toLowerCase().split(' ').slice(0, 4).join('-')
+    console.log(titleURL)
     return (
     <Card>
         <Card.Body>
             <Card.Title>{title}</Card.Title>
             <Card.Subtitle className="mb-2 text-muted">{date}</Card.Subtitle>
             <Card.Text>{excerpt}</Card.Text>
-            <NavLink to={`/blog/post/${id}`}><Button>Read More</Button></NavLink>
+            <NavLink to={`/blog/post/${id}/${titleURL}`}><Button>Read More</Button></NavLink>
         </Card.Body>
     </Card>
     )
