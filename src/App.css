@@ -171,11 +171,23 @@ img {
 
 .blog-post-content {
   background-color: white;
-  width: 50%;
+  width: 60%;
   margin: 0 auto;
   opacity: 0.9;
   border-radius: 15px;
   color: black !important;
+}
+
+.blog-post-content img {
+  width: 100%;
+}
+
+figcaption {
+  text-align: center;
+  background-color: black;
+  border-radius: 25px;
+  padding: 5px;
+  color: white;
 }
 
 .blog-post-text {
