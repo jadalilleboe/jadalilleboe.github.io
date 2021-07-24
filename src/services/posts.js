@@ -1,5 +1,5 @@
 import axios from 'axios'
-const baseUrl = 'https://secure-tundra-10442.herokuapp.com/api/posts'
+const baseUrl = process.env.REACT_APP_BACKEND_URL
 
 const getAll = () => {
     const request = axios.get(baseUrl)
