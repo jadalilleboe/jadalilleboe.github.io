@@ -209,11 +209,13 @@ figcaption {
 }
 
 .projects-cards {
-  display: grid;
+  /* display: grid;
   text-align: center;
   grid-template-columns: repeat(auto-fit, minmax(320px, 2fr));
-  grid-gap: 15px;
-  /* display: flex; */
+  grid-gap: 15px; */
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
 }
 
 .project-button:hover {
