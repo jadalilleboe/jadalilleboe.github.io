@@ -36,6 +36,7 @@ const BlogPost = ({ id }) => {
                 <p className="blog-post-info" style={{padding: "0px 15px 0px"}}>By <NavLink to="/about">Jada Lilleboe</NavLink></p>
                 <h1>{post.title}</h1>
                 <div className="blog-post-text" dangerouslySetInnerHTML={{__html: postMarkdown.body.innerHTML}} style={{textAlign: 'left', padding: '30px'}}/>
+                <div id="commento"></div>
             </div>
             <Button style={{margin: 10, backgroundColor: 'black', borderColor: 'white'}} onClick={() => history.goBack()}>&lt;-</Button>
         </div>
