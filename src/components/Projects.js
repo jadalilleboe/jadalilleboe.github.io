@@ -4,6 +4,7 @@ import emailPic from '../img/email.png'
 import apiPic from '../img/survivorapi.png'
 import hackPic from '../img/PMHackSS.png'
 import ww from '../img/ww.png'
+import nasa from '../img/allaboutnasa.png'
 
 const ProjectCard = ({ img, title, text, firstLink, firstLinkText, otherLink, otherLinkText }) => {
     const cardStyle = {
@@ -35,6 +36,7 @@ const Projects = () => {
         <div className="projects-content">
             <h1 style={{padding: 20}}>Projects</h1>
             <div className="projects-cards">
+                <ProjectCard img={nasa} title="All About NASA" text="React Native mobile application which has the latest NASA news, images, and fun facts!" firstLink="https://github.com/jadalilleboe/all-about-nasa" firstLinkText="Github Repository" otherLink="https://snack.expo.dev/@jlillebo/github.com-jadalilleboe-all-about-nasa" otherLinkText="Expo Snack Demo"/>
                 <ProjectCard className="project-1" img={ww} title="Wellness Wendell" text="A full stack web application that allows users to sign up for an account and customize Wellness Wendell messages sent via text." firstLink="https://github.com/jadalilleboe/wellness-wendell" firstLinkText="Github Repository" otherLink="https://wellnesswendell.herokuapp.com/#/" otherLinkText="Wellness Wendell Website"/>
                 <ProjectCard className="project-2" img={emailPic} title="Subreddit Email Summaries" text="This is a full-stack web application that allows users to sign-up for a daily, weekly, or monthly subreddit summary sent via e-mail." firstLink="https://github.com/jadalilleboe/subreddit_summaries" firstLinkText="Github Repository" otherLink="http://subredditemailsummary.com" otherLinkText="Subreddit Email Summary Signup Website"/>
                 <ProjectCard className="project-3" img={apiPic} title="Survivor Database & API" text="For this project, I used web scraping tools to make a database about CBS's show Survivor. I then built an API that could query the data." firstLink="https://github.com/jadalilleboe/survivor-db-api" firstLinkText="Github Repository" otherLink="https://www.postman.com/jlillebo/workspace/survivor-api/overview" otherLinkText="Postman Collection"/>
