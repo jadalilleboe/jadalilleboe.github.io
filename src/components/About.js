@@ -1,20 +1,44 @@
 import React from 'react'
-import jadapic2 from '../img/jadapic2.jpeg'
-import { NavLink } from 'react-router-dom'
 
 const About = () => {
     return (
         <div className="about-content">
-            <div className="left-grid-item jada-picture-2">
-                <img className="img-fluid" src={jadapic2} alt="placecholder"/>
-            </div>
-            <div className="right-grid-item about-info">
-                <h1>About Me</h1>
-                <p>Hi! My name is Jada Lilleboe, and I am currently a sophomore student at the University of Minnesota Twin-Cities. I am pursuing a B.A. in Computer Science and a minor in Technical Writing and Communication. I became interested in computer science after taking an introductory progamming course at the U (and enjoying it very much). I'm an officer of the UMN student group ACM-W, and a staunch advocate for the retention of women in computing and technology.</p>
-                <p>I was born in Minneapolis, MN and grew up in Cottage Grove, MN. I graduated from Park High School in 2020 with summa cum laude distinction. While in high school, I participated in theater, choir, and marching band.</p>
-                <p>Lately, coding and making interactive web applications have been my main hobbies. I enjoy web development because there's so much to learn, and so many different areas to try out like front-end, back-end, etc.</p>
-                <p>Some of my other hobbies are reading, yoga, and spending time with friends and family.</p>
-                <p>Feel free to reach out to me about anything! I'm always happy to chat, and all of my contact information can be found on the <NavLink to='/contact' className="paragraph-link">contact page</NavLink>.</p>
+            <div className="about-info box">
+                <h1>Resume</h1>
+                <div style={{paddingLeft: '20px'}}>
+                    <h2><u>Education</u></h2>
+                    <h3>University of Minnesota - Twin Cities <i>Bachelor's in Computer Science, Minor in Technical Writing and Communication</i></h3>
+                    <h4>September 2020 - Anticipated Graduation May 2024</h4>
+                    <ul>
+                        <li>4.0 GPA - Dean's List - Honors Student</li>
+                    </ul>
+                    <h2><u>Experience</u></h2>
+                    <h3>Student Tech Support Services/Open Source Software Developer <i>University of Minnesota</i></h3>
+                    <h4>December 2021 - Present</h4>
+                    <ul>
+                        <li>Creating new features and fixing issues for <a href="https://skyportal.io/">Skyportal</a>, an open source astronomical data platform. Participate in weekly standup meetings.</li>
+                        <li>Use React, Tornado (backend framework for Python), and SQLAlchemy to create end-to-end features.</li>
+                        <li>Write unit tests with Selenium and Pytest.</li>
+                    </ul>
+                    <h3>Student Researcher <i>GroupLens Research Lab</i></h3>
+                    <h4>September 2021 - Present</h4>
+                    <ul>
+                        <li>Building a user interface with React and Material UI which allows users to audit predictions made by the Wikipedia machine learning model ORES.</li>
+                        <li>Using software development tools such as Git in a team of 3 developers.</li>
+                    </ul>
+                    <h3>Student Admin/Support Services <i>University of Minnesota</i></h3>
+                    <h4>February 2021 - January 2021</h4>
+                    <ul>
+                        <li>Create web content to be viewed by over 100 faculty members on department intranet</li>
+                        <li>Assist the accounting team with the creation and maintenance of spreadsheets to visualize finance data</li>
+                    </ul>
+                    <h2><u>Extracurriculars</u></h2>
+                    <ul>
+                        <li>Officer for UMN Association of Computing Machinery for Women</li>
+                        <li>Postman Student Leader - presented the talk “How I Built an API For My Website’s Blog” at the Postman Student Summit and hosted API workshops</li>
+                        <li>Volunteer at CoderDojo Twin Cities</li>
+                    </ul>
+                </div>
             </div>
         </div>
     )

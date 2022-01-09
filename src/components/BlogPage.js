@@ -1,10 +1,9 @@
 import React from 'react'
-import { Button, Card, CardColumns } from 'react-bootstrap'
+import { Button, Card, CardColumns, Row } from 'react-bootstrap'
 import { NavLink } from 'react-router-dom'
 
 const BlogCard = ({ title, excerpt, id, date }) => {
     const titleURL = title.toLowerCase().split(' ').slice(0, 4).join('-')
-    console.log(titleURL)
     return (
     <Card>
         <Card.Body>
@@ -41,15 +40,15 @@ const BlogPage = ({ pageNum, posts }) => {
     }
 
     const postsToDisplay = posts.slice(startingPostNum, endingPostNum)
-
+    console.log(postsToDisplay)
     if (parseInt(pageNum) === 1) {
         return (
             <div className="blog-content">
                 <h1 style={{textAlign: 'center', padding: 20}}>Jada's Blog</h1>
-                <CardColumns>
+                <Row xs={1} md={2} className="g-4">
                     {postsToDisplay.map((post, i) => <BlogCard key={i} title={post.title} excerpt={post.excerpt} id={post.id} date={formatDate(post.date)} />
                     )}
-                </CardColumns>
+                </Row>
                 {/* <NavLink to={`/blog/page/${parseInt(pageNum) + 1}`}><Button style={{margin: 10}}>-&gt;</Button></NavLink> */}
             </div>
         )

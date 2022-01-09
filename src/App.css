@@ -122,19 +122,10 @@ img {
   grid-template-columns: repeat(autofit, minmax(100px, 1fr));
   column-gap: 100px;
   height: fit-content;
-  background-image: url(img/orangetulips.jpg);
+  /* background-image: url(img/orangetulips.jpg); */
   background-size: cover;
   color: white;
-}
-
-.jada-picture-2 {
-  max-width: 100%;
-  text-align: left;
-}
-
-.jada-picture-2 img {
-  max-height: 760px;
-  border: 5px solid black;
+  background-color: black;
 }
 
 .about-info h1 {
@@ -145,8 +136,6 @@ img {
 .about-info p {
   text-align: left;
   padding: 10px;
-  background-color: black;
-  opacity: 0.75;
   color: white;
 }
 
